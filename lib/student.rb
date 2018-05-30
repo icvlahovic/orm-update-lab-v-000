@@ -39,7 +39,7 @@ class Student
 
   def self.find_by_name(name)
     row = DB[:conn].execute("SELECT * FROM students WHERE name = ? LIMIT(1)", name)
-    new_from_db(row)
+    puts row
   end
 
   def self.create_table
