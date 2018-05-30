@@ -10,6 +10,11 @@ class Student
     @id = id
   end
 
+  def self.create(name:, grade:)
+    new_student = Student.new(name, grade)
+    new_student.name =
+  end
+
   def save
     if self.id
       self.update
