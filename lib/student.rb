@@ -17,7 +17,9 @@ class Student
   end
 
   def self.new_from_db(row)
-    puts row
+    new_student = self.new(row[1], row[2])
+    new_student.save
+    new_student
   end
 
   def save
