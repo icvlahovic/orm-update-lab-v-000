@@ -38,8 +38,8 @@ class Student
   end
 
   def self.find_by_name(name)
-    row = DB[:conn].execute("SELECT * FROM students WHERE name = ? LIMIT(1)", name)
-    self.new_from_db(row)
+    sql = "SELECT * FROM students WHERE name = ? LIMIT(1)"
+    DB[:conn].execute(sql, name)
   end
 
   def self.create_table
