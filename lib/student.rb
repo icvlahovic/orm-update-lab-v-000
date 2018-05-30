@@ -17,7 +17,7 @@ class Student
   end
 
   def self.new_from_db(row)
-
+    puts row
   end
 
   def save
