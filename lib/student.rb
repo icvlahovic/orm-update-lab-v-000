@@ -20,8 +20,6 @@ class Student
 
   end
 
-  def
-
   def save
     if self.id
       self.update
